@@ -1,13 +1,14 @@
 import constants.BallConstants;
+import constants.BallStatus;
 import constants.ErrorMessage;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class Balls {
     private final List<Ball> balls;
-    private final HashMap<Integer, Integer> duplicateChecker = new HashMap<>();
+    private final HashSet<Integer> duplicateChecker = new HashSet<>();
 
     public Balls(List<Integer> inputs) {
         checkValidSize(inputs.size());
@@ -19,9 +20,8 @@ public class Balls {
         List<Ball> balls = new ArrayList<>();
 
         for (int i = 0; i < inputs.size(); i++) {
-            Ball ball = new Ball(inputs.get(i));
+            Ball ball = new Ball(inputs.get(i), i);
             checkDuplicateBall(ball);
-            duplicateChecker.put(ball.getNumber(), i);
             balls.add(ball);
         }
 
@@ -29,14 +29,43 @@ public class Balls {
     }
 
     private void checkDuplicateBall(Ball ball) {
-        if (duplicateChecker.containsKey(ball.getNumber())) {
+        if (duplicateChecker.contains(ball.getNumber())) {
             throw new IllegalArgumentException(ErrorMessage.duplicateBallException);
         }
+
+        duplicateChecker.add(ball.getNumber());
     }
 
     private void checkValidSize(int size) {
         if (size != BallConstants.COUNT) {
             throw new IllegalArgumentException(ErrorMessage.ballCountException);
         }
+    }
+
+    public BallStatus getBallStatus(Ball inputBall) {
+        if (!duplicateChecker.contains(inputBall.getNumber())) {
+            return BallStatus.NOTHING;
+        }
+
+        if (balls.get(inputBall.getPosition()).strike(inputBall)) {
+            return BallStatus.STRIKE;
+        }
+
+        return BallStatus.BALL;
+    }
+
+    public BallsResult play(Balls userBalls) {
+        BallsResult ballsResult = new BallsResult();
+
+        for (Ball userBall : userBalls.getBalls()) {
+            BallStatus ballStatus = getBallStatus(userBall);
+            ballsResult.count(ballStatus);
+        }
+
+        return ballsResult;
+    }
+
+    public List<Ball> getBalls() {
+        return balls;
     }
 }
