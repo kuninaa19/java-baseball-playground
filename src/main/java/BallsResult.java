@@ -14,28 +14,16 @@ public class BallsResult {
 
     public void count(BallStatus ballStatus) {
         if (ballStatus.strike()) {
-            countStrike();
+            strike += BallsResultConstants.addCount;
         }
 
         if (ballStatus.ball()) {
-            countBall();
+            ball += BallsResultConstants.addCount;
         }
 
         if (ballStatus.nothing()) {
-            countNothing();
+            nothing += BallsResultConstants.addCount;
         }
-    }
-
-    public void countStrike() {
-        strike += BallsResultConstants.addCount;
-    }
-
-    public void countBall() {
-        ball += BallsResultConstants.addCount;
-    }
-
-    public void countNothing() {
-        nothing += BallsResultConstants.addCount;
     }
 
     public int getStrike() {
