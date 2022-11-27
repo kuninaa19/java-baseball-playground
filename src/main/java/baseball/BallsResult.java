@@ -1,5 +1,7 @@
-import constants.BallStatus;
-import constants.BallsResultConstants;
+package baseball;
+
+import baseball.constants.BallStatus;
+import baseball.constants.BallsResultConstants;
 
 public class BallsResult {
     private Integer strike;

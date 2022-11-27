@@ -1,5 +1,7 @@
-import constants.GameConstants;
-import constants.ProgressStatus;
+package baseball;
+
+import baseball.constants.GameConstants;
+import baseball.constants.ProgressStatus;
 
 public class Game {
     private final Balls balls;

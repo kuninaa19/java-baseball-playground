@@ -1,5 +1,10 @@
-import constants.BallStatus;
-import constants.ErrorMessage;
+package baseball;
+
+import baseball.Ball;
+import baseball.Balls;
+import baseball.BallsResult;
+import baseball.constants.BallStatus;
+import baseball.constants.ErrorMessage;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

@@ -1,6 +1,8 @@
-import constants.BallConstants;
-import constants.BallStatus;
-import constants.ErrorMessage;
+package baseball;
+
+import baseball.constants.BallConstants;
+import baseball.constants.BallStatus;
+import baseball.constants.ErrorMessage;
 
 import java.util.ArrayList;
 import java.util.HashSet;

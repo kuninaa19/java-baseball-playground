@@ -1,5 +1,7 @@
-import constants.BallConstants;
-import constants.ErrorMessage;
+package baseball;
+
+import baseball.constants.BallConstants;
+import baseball.constants.ErrorMessage;
 
 public class Ball {
     private final Integer number;

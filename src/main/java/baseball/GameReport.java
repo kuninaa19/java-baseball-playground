@@ -1,3 +1,5 @@
+package baseball;
+
 public class GameReport {
     private final int strike;
     private final int ball;

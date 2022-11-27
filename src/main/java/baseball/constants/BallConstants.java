@@ -1,4 +1,4 @@
-package constants;
+package baseball.constants;
 
 public class BallConstants {
     public static final Integer MIN = 1;
