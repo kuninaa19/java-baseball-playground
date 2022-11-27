@@ -1,7 +1,6 @@
 package baseball;
 
-import baseball.Ball;
-import baseball.constants.ErrorMessage;
+import baseball.messages.ErrorMessage;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;

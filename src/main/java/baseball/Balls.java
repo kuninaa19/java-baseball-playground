@@ -2,7 +2,7 @@ package baseball;
 
 import baseball.constants.BallConstants;
 import baseball.constants.BallStatus;
-import baseball.constants.ErrorMessage;
+import baseball.messages.ErrorMessage;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package baseball.constants;
+package baseball.messages;
 
 public class ErrorMessage {
     public static final String ballNumberException = "유효하지않은 볼 번호 입니다";

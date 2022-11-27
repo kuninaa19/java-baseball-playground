@@ -1,6 +1,6 @@
-package baseball.constants;
+package baseball.messages;
 
-public class printMessage {
+public class GameResultMessage {
     public static final String ball = "볼";
     public static final String strike = "스트라이크";
     public static final String nothing = "";
