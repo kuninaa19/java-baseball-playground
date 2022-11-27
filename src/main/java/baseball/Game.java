@@ -14,15 +14,13 @@ public class Game {
 
     public GameReport process(Balls userBalls) {
         BallsResult ballsResult = balls.play(userBalls);
-        GameReport gameReport = new GameReport(ballsResult);
+        checkGameEnd(ballsResult);
 
-        checkGameEnd(gameReport);
-
-        return gameReport;
+        return new GameReport(ballsResult);
     }
 
-    private void checkGameEnd(GameReport gameReport) {
-        if (gameReport.getStrike() == GameConstants.endCondition) {
+    private void checkGameEnd(BallsResult ballsResult) {
+        if (ballsResult.getStrike() == GameConstants.endCondition) {
             this.progressStatus = ProgressStatus.N;
         }
     }

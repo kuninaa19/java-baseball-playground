@@ -1,25 +1,33 @@
 package baseball;
 
+import baseball.constants.BallsResultConstants;
+import baseball.constants.printMessage;
+
+import java.util.Objects;
+
 public class GameReport {
-    private final int strike;
-    private final int ball;
-    private final int nothing;
+    private final String strike;
+    private final String ball;
 
     public GameReport(BallsResult ballsResult) {
-        this.strike = ballsResult.getStrike();
-        this.ball = ballsResult.getBall();
-        this.nothing = ballsResult.getNothing();
+        this.ball = createMessage(ballsResult.getBall(), printMessage.ball);
+        this.strike = createMessage(ballsResult.getStrike(), printMessage.strike);
     }
 
-    public int getStrike() {
-        return strike;
+    private String createMessage(int ballCount, String resultMessage) {
+        if (ballCount != BallsResultConstants.initial) {
+            return ballCount + resultMessage;
+        }
+
+        return printMessage.nothing;
     }
 
-    public int getBall() {
-        return ball;
-    }
+    @Override
+    public String toString() {
+        if (!Objects.equals(ball, printMessage.nothing) && !Objects.equals(strike, printMessage.nothing)) {
+            return ball + printMessage.messageInterval + strike;
+        }
 
-    public int getNothing() {
-        return nothing;
+        return ball + strike;
     }
 }
