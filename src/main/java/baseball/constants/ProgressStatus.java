@@ -6,8 +6,4 @@ public enum ProgressStatus {
     public boolean progress() {
         return this == Y;
     }
-
-    public boolean end() {
-        return this == N;
-    }
 }
