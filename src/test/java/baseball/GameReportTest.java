@@ -41,4 +41,14 @@ public class GameReportTest {
         GameReport gameReport = new GameReport(ballsResult);
         assertThat(gameReport.toString()).isEqualTo("1볼");
     }
+
+    @Test
+    void 메시지_낫싱() {
+        ballsResult.count(BallStatus.NOTHING);
+        ballsResult.count(BallStatus.NOTHING);
+        ballsResult.count(BallStatus.NOTHING);
+
+        GameReport gameReport = new GameReport(ballsResult);
+        assertThat(gameReport.toString()).isEqualTo("낫싱");
+    }
 }
