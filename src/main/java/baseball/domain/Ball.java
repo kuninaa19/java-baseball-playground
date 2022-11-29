@@ -12,7 +12,6 @@ public class Ball {
 
         this.number = input;
         this.position = position;
-
     }
 
     private void checkValidBallNumber(int input) {
@@ -22,7 +21,7 @@ public class Ball {
     }
 
     public boolean strike(Ball inputBall) {
-        return number == inputBall.getNumber() && position == inputBall.getPosition();
+        return this.equals(inputBall);
     }
 
     public int getNumber() {
@@ -33,4 +32,11 @@ public class Ball {
         return position;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ball ball = (Ball) o;
+        return number == ball.number && position == ball.position;
+    }
 }
