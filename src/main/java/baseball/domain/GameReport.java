@@ -10,7 +10,6 @@ import java.util.Objects;
 public class GameReport {
     private final String strike;
     private final String ball;
-
     private final String nothing;
 
     public GameReport(BallsResult ballsResult) {

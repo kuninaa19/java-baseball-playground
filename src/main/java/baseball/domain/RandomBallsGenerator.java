@@ -1,7 +1,6 @@
 package baseball.domain;
 
 import baseball.constants.BallConstants;
-import baseball.domain.Balls;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
