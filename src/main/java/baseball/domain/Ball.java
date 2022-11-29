@@ -4,10 +4,10 @@ import baseball.constants.BallConstants;
 import baseball.messages.ErrorMessage;
 
 public class Ball {
-    private final Integer number;
-    private final Integer position;
+    private final int number;
+    private final int position;
 
-    public Ball(Integer input, Integer position) {
+    public Ball(int input, int position) {
         checkValidBallNumber(input);
 
         this.number = input;
@@ -15,7 +15,7 @@ public class Ball {
 
     }
 
-    private void checkValidBallNumber(Integer input) {
+    private void checkValidBallNumber(int input) {
         if (input < BallConstants.MIN || input > BallConstants.MAX) {
             throw new IllegalArgumentException(ErrorMessage.ballNumberException);
         }
@@ -25,11 +25,11 @@ public class Ball {
         return number == inputBall.getNumber() && position == inputBall.getPosition();
     }
 
-    public Integer getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public Integer getPosition() {
+    public int getPosition() {
         return position;
     }
 

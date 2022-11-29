@@ -1,7 +1,7 @@
 package baseball.constants;
 
 public class BallConstants {
-    public static final Integer MIN = 1;
-    public static final Integer MAX = 9;
-    public static final Integer COUNT = 3;
+    public static final int MIN = 1;
+    public static final int MAX = 9;
+    public static final int COUNT = 3;
 }

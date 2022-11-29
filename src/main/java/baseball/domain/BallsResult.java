@@ -4,9 +4,9 @@ import baseball.constants.BallStatus;
 import baseball.constants.BallsResultConstants;
 
 public class BallsResult {
-    private Integer strike;
-    private Integer ball;
-    private Integer nothing;
+    private int strike;
+    private int ball;
+    private int nothing;
 
     public BallsResult() {
         this.strike = BallsResultConstants.initial;
@@ -36,7 +36,7 @@ public class BallsResult {
         return ball;
     }
 
-    public Integer getNothing() {
+    public int getNothing() {
         return nothing;
     }
 }
