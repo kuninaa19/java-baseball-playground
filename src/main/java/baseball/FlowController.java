@@ -1,6 +1,10 @@
 package baseball;
 
 import baseball.constants.ProgressStatus;
+import baseball.domain.Balls;
+import baseball.domain.Game;
+import baseball.domain.GameReport;
+import baseball.domain.RandomBallsGenerator;
 import baseball.input.InputBallNumbers;
 import baseball.input.InputGameProgress;
 import baseball.view.ErrorView;

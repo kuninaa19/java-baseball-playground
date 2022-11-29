@@ -1,5 +1,7 @@
 package baseball;
 
+import baseball.domain.Balls;
+import baseball.domain.RandomBallsGenerator;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

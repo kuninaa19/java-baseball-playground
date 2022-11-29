@@ -1,6 +1,8 @@
 package baseball;
 
 import baseball.constants.BallStatus;
+import baseball.domain.BallsResult;
+import baseball.domain.GameReport;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

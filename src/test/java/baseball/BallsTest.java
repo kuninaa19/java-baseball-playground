@@ -1,6 +1,9 @@
 package baseball;
 
 import baseball.constants.BallStatus;
+import baseball.domain.Ball;
+import baseball.domain.Balls;
+import baseball.domain.BallsResult;
 import baseball.messages.ErrorMessage;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,4 +1,4 @@
-package baseball;
+package baseball.domain;
 
 import baseball.constants.BallConstants;
 import baseball.messages.ErrorMessage;

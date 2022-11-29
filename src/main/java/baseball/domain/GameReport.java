@@ -1,7 +1,8 @@
-package baseball;
+package baseball.domain;
 
 import baseball.constants.BallConstants;
 import baseball.constants.BallsResultConstants;
+import baseball.domain.BallsResult;
 import baseball.messages.GameResultMessage;
 
 import java.util.Objects;

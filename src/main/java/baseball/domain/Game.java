@@ -1,4 +1,4 @@
-package baseball;
+package baseball.domain;
 
 import baseball.constants.GameConstants;
 import baseball.constants.ProgressStatus;
